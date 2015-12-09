@@ -164,117 +164,138 @@
 
 	//------------------------------------------------------------------------------------------------------------------------------------------------------------
 	// module init method
+	//
+	// Run this method once after your DOM was loaded
 	//------------------------------------------------------------------------------------------------------------------------------------------------------------
-	tabcordion.init = function initTabcodions() {
+	tabcordion.init = function tabcodionsInit() {
 		GUI.debugging( 'tabcordion: Initiating', 'report' );
 
 		if( $('.js-collapsible').length ) {
 			GUI.debugging( 'tabcordion: Found instance', 'report' );
 
-			$('.js-collapsible').on('click', function clickCollapsible(e) {
-				GUI.debugging( 'collapsible: Collapsible clicked', 'interaction' );
-				e.preventDefault();
+			GUI.tabcordion.render();
+		}
+	};
 
-				var $this = $(this);
-				var target = $this.attr('href') ? $this.attr('href') : $this.attr('data-collapsible');
-				var $tabcordion = $this.parents('.tabcordion')
 
-				if( $tabcordion.length ) {
-					GUI.debugging( 'collapsible: Found to be inside tabcordion', 'report' );
+	//------------------------------------------------------------------------------------------------------------------------------------------------------------
+	// module render method
+	//
+	// You can run the render method if you want to bypass the length check or render elements added dynamically to the DOM after loading
+	//------------------------------------------------------------------------------------------------------------------------------------------------------------
+	tabcordion.render = function tabcodionsRender() {
+		GUI.debugging( 'tabcordion: Rendering', 'report' );
 
-					var $tabs = $this.parents('.tabcordion').find('.collapsible-body');
-					var _isMobile = parseInt( $('html').css('line-height') ) === 1; //responsive animations (requires responsive css on html)
-					var _isAccordion = true;
+		$('.js-collapsible').not('.js-rendered').on('click', function clickCollapsible(e) {
+			GUI.debugging( 'collapsible: Collapsible clicked', 'interaction' );
+			e.preventDefault();
 
-					if( !_isMobile ) {
-						_isAccordion = false;
+			var $this = $(this);
+			var target = $this.attr('href') ? $this.attr('href') : $this.attr('data-collapsible');
+			var $tabcordion = $this.parents('.tabcordion')
 
-						if( $this.parents('.tabcordion-accordion').length ) {
-							_isAccordion = true;
-						}
+			if( $tabcordion.length ) {
+				GUI.debugging( 'collapsible: Found to be inside tabcordion', 'report' );
+
+				var $tabs = $this.parents('.tabcordion').find('.collapsible-body');
+				var _isMobile = parseInt( $('html').css('line-height') ) === 1; //responsive animations (requires responsive css on html)
+				var _isAccordion = true;
+
+				if( !_isMobile ) {
+					_isAccordion = false;
+
+					if( $this.parents('.tabcordion-accordion').length ) {
+						_isAccordion = true;
 					}
+				}
 
-					if( $this.parents('.tabcordion-tabs').length ) {
-						_isAccordion = false;
-					}
+				if( $this.parents('.tabcordion-tabs').length ) {
+					_isAccordion = false;
+				}
 
-					//animating transition
-					if( _isAccordion ) {
-						GUI.collapsible.close( $tabs.filter('.is-open'), true );
-						GUI.collapsible.open( $tabcordion.find( target ), true, function scrollToTab() {
-							//scroll to top
-							$('html, body').animate({ scrollTop: ( $this.offset().top - 60 ) }, 300);
-						}, false);
-					}
-					else {
-						GUI.collapsible.close( $tabs.filter('.is-open'), false, function closingCallback() {
-							GUI.collapsible.open( $tabcordion.find( target ), false, null, false );
-						});
-					}
-
-					//adding active states to tabs and headers
-					$tabcordion.find('.js-collapsible').parent().removeClass('is-active');
-					$tabcordion.find('.js-collapsible[data-collapsible="' + target + '"], .js-collapsible[href="' + target + '"]').parent().addClass('is-active');
-
+				//animating transition
+				if( _isAccordion ) {
+					GUI.collapsible.close( $tabs.filter('.is-open'), true );
+					GUI.collapsible.open( $tabcordion.find( target ), true, function scrollToTab() {
+						//scroll to top
+						$('html, body').animate({ scrollTop: ( $this.offset().top - 60 ) }, 300);
+					}, false);
 				}
 				else {
-					GUI.debugging( 'collapsible: Triggering pure toggle', 'report' );
-
-					var mode = $this.attr('data-collapsible-mode');
-
-					//collapsible API
-					if( mode === 'show' ) {
-						GUI.collapsible.open( target, true );
-					}
-					else if( mode === 'hide' ) {
-						GUI.collapsible.close( target, true );
-					}
-					else {
-						GUI.collapsible.toggle( target, true );
-					}
+					GUI.collapsible.close( $tabs.filter('.is-open'), false, function closingCallback() {
+						GUI.collapsible.open( $tabcordion.find( target ), false, null, false );
+					});
 				}
 
-			});
+				//adding active states to tabs and headers
+				$tabcordion
+					.find('.js-collapsible')
+					.parents('.js-collapsible-tab')
+					.removeClass('is-active');
 
+				$tabcordion
+					.find('.js-collapsible[data-collapsible="' + target + '"], .js-collapsible[href="' + target + '"]')
+					.parents('.js-collapsible-tab')
+					.addClass('is-active');
+			}
+			else {
+				GUI.debugging( 'collapsible: Triggering pure toggle', 'report' );
 
-			//Arrow keys for tabs
-			$('.tabcordion-tabs .js-collapsible').on('keydown', function(e) {
-				GUI.debugging( 'collapsible: Keyboard used', 'interaction' );
+				var mode = $this.attr('data-collapsible-mode');
 
-				var $this = $(this);
-				var $prev = $this.parents('li').prev().children('.js-collapsible');
-				var $next = $this.parents('li').next().children('.js-collapsible');
-				var $all = $this.parents('.tabcordion-tabs').find('.js-collapsible');
-				var $target;
-				var dir = '';
-
-				switch(e.keyCode) {
-					case 37:
-						$target = $prev;
-						dir = 'Left';
-						break;
-					case 39:
-						$target = $next;
-						dir = 'Right';
-						break;
-					default:
-						$target = false
-						break;
+				//collapsible API
+				if( mode === 'show' ) {
+					GUI.collapsible.open( target, true );
 				}
-
-				if( $target.length ) {
-					GUI.debugging( 'collapsible: ' + dir + ' arrow key used', 'interaction' );
-
-					$all.attr('tabindex', '-1'); //disable all tabs for focus
-
-					$target //enable the target one
-						.attr('tabindex', null)
-						.focus()
-						.trigger('click');
+				else if( mode === 'hide' ) {
+					GUI.collapsible.close( target, true );
 				}
-			});
+				else {
+					GUI.collapsible.toggle( target, true );
+				}
+			}
 
-		}
+		});
+
+
+		//Arrow keys for tabs
+		$('.tabcordion-tabs .js-collapsible').not('.js-rendered').on('keydown', function(e) {
+			GUI.debugging( 'collapsible: Keyboard used', 'interaction' );
+
+			var $this = $(this);
+			var $prev = $this.parents('li').prev().children('.js-collapsible');
+			var $next = $this.parents('li').next().children('.js-collapsible');
+			var $all = $this.parents('.tabcordion-tabs').find('.js-collapsible');
+			var $target;
+			var dir = '';
+
+			switch(e.keyCode) {
+				case 37:
+					$target = $prev;
+					dir = 'Left';
+					break;
+				case 39:
+					$target = $next;
+					dir = 'Right';
+					break;
+				default:
+					$target = false
+					break;
+			}
+
+			if( $target.length ) {
+				GUI.debugging( 'collapsible: ' + dir + ' arrow key used', 'interaction' );
+
+				$all.attr('tabindex', '-1'); //disable all tabs for focus
+
+				$target //enable the target one
+					.attr('tabindex', null)
+					.focus()
+					.trigger('click');
+			}
+		});
+
+		$('.js-collapsible').addClass('js-rendered');
 	};
 
 
