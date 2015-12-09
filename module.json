@@ -1,0 +1,17 @@
+{
+	"ID": "tabcordions",
+	"name": "Tabcordions",
+	"description": "Tabs, accordions and a tab set that changes to an accordion based on break point.",
+	"category": "Containers",
+	"versions": {
+		"1.0.0": {
+			"dependencies": [],
+			"js": true,
+			"less": true,
+			"svg": false,
+			"font": false,
+			"size": 27
+		}
+	},
+	"hash": "7edd1d63f7f961b77b146622fe070680"
+}
