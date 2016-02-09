@@ -240,7 +240,7 @@
 //////////////////////////////////////| COLORS
 ._colors([Brand]);
 
-/*! _fonts v1.0.1 */
+/*! _fonts v1.0.2 */
 
 
 //////////////////////////////////////| FONTS MIXIN
@@ -303,23 +303,23 @@
 }
 
 
-//////////////////////////////////////| BREAKPOINTS
+//////////////////////////////////////| FONT FAMILY
 ._fonts-family( @brand ) {
 	.getBrand() when (@brand = BOM) {
-		@fontfamily: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
-		@brand-fontfamily: "stag", -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+		@fontfamily: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+		@brand-fontfamily: "stag", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 	}
 	.getBrand() when (@brand = BSA) {
-		@fontfamily: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
-		@brand-fontfamily: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+		@fontfamily: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+		@brand-fontfamily: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 	}
 	.getBrand() when (@brand = STG) {
-		@fontfamily: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
-		@brand-fontfamily: "dragonbold", -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+		@fontfamily: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+		@brand-fontfamily: "dragonbold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 	}
 	.getBrand() when (@brand = WBC) {
-		@fontfamily: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
-		@brand-fontfamily: "Times New Roman", "Times", -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+		@fontfamily: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+		@brand-fontfamily: "Times New Roman", "Times", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 	}
 	.getBrand();
 }
@@ -381,7 +381,7 @@
 //////////////////////////////////////| GRID
 ._grid([Brand]);
 
-/*! _text-styling v1.0.2 */
+/*! _text-styling v1.0.3 */
 
 
 //////////////////////////////////////| TEXT STYLING MIXIN
@@ -570,9 +570,6 @@
 ._text-styling-headings( @brand ) {
 
 	.getBrand() when (@brand = BOM) { /////////////////////////////////////////////////////// BOM
-		@fontfamily: "Helvetica Neue", "Roboto", Arial, sans-serif;
-		@brand-fontfamily: "stag", "Roboto", Arial, sans-serif;
-
 		.h1,
 		h1 {
 			font-size: 30px;
@@ -681,9 +678,6 @@
 		}
 	}
 	.getBrand() when (@brand = BSA) { /////////////////////////////////////////////////////// BSA
-		@fontfamily: "Helvetica Neue", "Roboto", Arial, sans-serif;
-		@brand-fontfamily: "Helvetica Neue", "Roboto", Arial, sans-serif;
-
 		.h1,
 		h1 {
 			font-size: 30px;
@@ -768,9 +762,6 @@
 		}
 	}
 	.getBrand() when (@brand = STG) { /////////////////////////////////////////////////////// STG
-		@fontfamily: "Helvetica Neue", "Roboto", Arial, sans-serif;
-		@brand-fontfamily: "dragonbold", "Helvetica Neue", "Roboto", Arial, sans-serif;
-
 		.h1,
 		h1 {
 			font-size: 30px;
@@ -879,9 +870,6 @@
 		}
 	}
 	.getBrand() when (@brand = WBC) { /////////////////////////////////////////////////////// WBC
-		@fontfamily: "Helvetica Neue", "Roboto", Arial, sans-serif;
-		@brand-fontfamily: "Times New Roman", "Times", "Helvetica Neue", "Roboto", Arial, sans-serif;
-
 		.h1,
 		h1 {
 			font-size: 30px;
