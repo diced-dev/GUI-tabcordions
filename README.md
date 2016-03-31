@@ -9,8 +9,8 @@ module in our [GUI-source repo](https://github.com/WestpacCXTeam/GUI-source/issu
 [BSA](http://westpaccxteam.github.io/GUI-tabcordions/tests/BSA/) |
 [STG](http://westpaccxteam.github.io/GUI-tabcordions/tests/STG/) |
 [WBC](http://westpaccxteam.github.io/GUI-tabcordions/tests/WBC/) |
-[STG](http://westpaccxteam.github.io/GUI-tabcordions/tests/WBG/) |
-[WBC](http://westpaccxteam.github.io/GUI-tabcordions/tests/BT/)
+[WBG](http://westpaccxteam.github.io/GUI-tabcordions/tests/WBG/) |
+[BT](http://westpaccxteam.github.io/GUI-tabcordions/tests/BT/)
 
 > Sometimes you need to group elements either for visual structure or as a functional requirement so that you can manipulate the group. For those situations
 > we’ve created several containers to get you started.
