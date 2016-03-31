@@ -17,7 +17,7 @@
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
 .brand-font {
-  font-family: "Times New Roman", "Times", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: Georgia, "Times New Roman", "Times", serif;
 }
 /*! _grid v2.0.0 */
 .clearfix:before,
@@ -1396,11 +1396,11 @@ textarea {
 .h1,
 h1 {
   font-size: 30px;
-  color: rebeccapurple;
-  font-family: "Times New Roman", "Times", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   margin-top: 18px;
   margin-bottom: 18px;
-  font-weight: 700;
+  font-weight: 300;
 }
 @media (min-width: 768px) {
   .h1,
@@ -1408,18 +1408,14 @@ h1 {
     font-size: 36px;
   }
 }
-.h1.body-font,
-h1.body-font {
-  font-weight: 300;
-}
 .h2,
 h2 {
   font-size: 24px;
-  color: rebeccapurple;
-  font-family: "Times New Roman", "Times", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   margin-top: 18px;
   margin-bottom: 12px;
-  font-weight: 700;
+  font-weight: 300;
 }
 @media (min-width: 768px) {
   .h2,
@@ -1427,18 +1423,14 @@ h2 {
     font-size: 30px;
   }
 }
-.h2.body-font,
-h2.body-font {
-  font-weight: 300;
-}
 .h3,
 h3 {
   font-size: 18px;
-  color: rebeccapurple;
-  font-family: "Times New Roman", "Times", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   margin-top: 18px;
   margin-bottom: 12px;
-  font-weight: 700;
+  font-weight: 300;
 }
 @media (min-width: 768px) {
   .h3,
@@ -1446,18 +1438,14 @@ h3 {
     font-size: 24px;
   }
 }
-.h3.body-font,
-h3.body-font {
-  font-weight: 300;
-}
 .h4,
 h4 {
   font-size: 16px;
-  color: rebeccapurple;
-  font-family: "Times New Roman", "Times", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   margin-top: 18px;
   margin-bottom: 12px;
-  font-weight: 700;
+  font-weight: 400;
 }
 @media (min-width: 768px) {
   .h4,
@@ -1465,34 +1453,22 @@ h4 {
     font-size: 18px;
   }
 }
-.h4.body-font,
-h4.body-font {
-  font-weight: 400;
-}
 .h5,
 h5 {
   font-size: 16px;
-  color: rebeccapurple;
+  color: #333;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   margin-top: 12px;
   margin-bottom: 6px;
   font-weight: 500;
 }
-.h5.body-font,
-h5.body-font {
-  font-weight: 500;
-}
 .h6,
 h6 {
   font-size: 14px;
-  color: rebeccapurple;
+  color: #333;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   margin-top: 12px;
   margin-bottom: 0px;
-  font-weight: 700;
-}
-.h6.body-font,
-h6.body-font {
   font-weight: 700;
 }
 h1,
@@ -1503,19 +1479,100 @@ h5,
 h6 {
   line-height: 1.1;
 }
+/*
+	 *  SETTINGS
+	 */
+.h1,
+h1 {
+  font-size: 30px;
+  color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  margin-top: 18px;
+  margin-bottom: 18px;
+  font-weight: 300;
+}
+@media (min-width: 768px) {
+  .h1,
+  h1 {
+    font-size: 36px;
+  }
+}
+.h2,
+h2 {
+  font-size: 24px;
+  color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  margin-top: 18px;
+  margin-bottom: 12px;
+  font-weight: 300;
+}
+@media (min-width: 768px) {
+  .h2,
+  h2 {
+    font-size: 30px;
+  }
+}
+.h3,
+h3 {
+  font-size: 18px;
+  color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  margin-top: 18px;
+  margin-bottom: 12px;
+  font-weight: 300;
+}
+@media (min-width: 768px) {
+  .h3,
+  h3 {
+    font-size: 24px;
+  }
+}
+.h4,
+h4 {
+  font-size: 16px;
+  color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  margin-top: 18px;
+  margin-bottom: 12px;
+  font-weight: 400;
+}
+@media (min-width: 768px) {
+  .h4,
+  h4 {
+    font-size: 18px;
+  }
+}
+.h5,
+h5 {
+  font-size: 16px;
+  color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  margin-top: 12px;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+.h6,
+h6 {
+  font-size: 14px;
+  color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  margin-top: 12px;
+  margin-bottom: 0px;
+  font-weight: 700;
+}
 html {
   font-size: 6px;
 }
 body {
   font-size: 14px;
   line-height: 1.428571429;
-  color: rebeccapurple;
-  background-color: rebeccapurple;
+  color: #333;
+  background-color: #f9f9f9;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
 abbr[title] {
   cursor: help;
-  border-bottom: 1px dotted rebeccapurple;
+  border-bottom: 1px dotted #333;
   text-decoration: none;
 }
 address {
@@ -1526,7 +1583,7 @@ blockquote {
   font-weight: 300;
 }
 mark {
-  background-color: #e0d6eb;
+  background-color: #cceff7;
 }
 dl dt {
   font-weight: 700;
@@ -1535,23 +1592,23 @@ dl dd {
   margin: 0;
 }
 ::-moz-selection {
-  background-color: #e0d6eb;
+  background-color: #cceff7;
 }
 ::selection {
-  background-color: #e0d6eb;
+  background-color: #cceff7;
 }
 a {
-  color: rebeccapurple;
+  color: #9e005d;
   text-decoration: none;
 }
 a:hover,
 a:focus {
-  color: rebeccapurple;
+  color: #9e005d;
   text-decoration: underline;
 }
 a:focus {
   outline: none;
-  color: rebeccapurple;
+  color: #9e005d;
 }
 .is-keyboarduser a:focus {
   outline: 2px dotted #000;
@@ -1680,7 +1737,7 @@ html {
   }
 }
 .tabcordion {
-  border: 1px solid rebeccapurple;
+  border: 1px solid #e0e0e0;
   border-bottom: 0 none;
   border-radius: 3px;
 }
@@ -1695,7 +1752,7 @@ html {
   border-radius: 0;
 }
 .tabcordion-accordion.tabcordion {
-  border: 1px solid rebeccapurple;
+  border: 1px solid #e0e0e0;
   border-bottom: 0 none;
   border-radius: 3px;
 }
@@ -1756,9 +1813,9 @@ html {
       -ms-flex-align: end;
           align-items: flex-end;
   padding: 14px 18px 14px 18px;
-  color: rebeccapurple;
-  background-color: rebeccapurple;
-  border: 1px solid rebeccapurple;
+  color: #333;
+  background-color: #fcfcfc;
+  border: 1px solid #e0e0e0;
   border-bottom: 0 none;
   border-top-right-radius: 6px;
   border-top-left-radius: 6px;
@@ -1776,7 +1833,7 @@ html {
 .tabcordion .tabcordion-tabs .tabcordion-tab a:hover {
   outline: none;
   text-decoration: none;
-  background-color: rebeccapurple;
+  background-color: #f9f9f9;
 }
 .tabcordion .tabcordion-tabs .tabcordion-tab.is-active a {
   background-color: #fff;
@@ -1793,30 +1850,30 @@ html {
   display: inline-block;
 }
 .tabcordion-lego.tabcordion .tabcordion-tabs .tabcordion-tab a {
-  background-color: rebeccapurple;
+  background-color: #2574a9;
   color: #fff;
   border-radius: 0;
   margin-bottom: 2px;
   padding-bottom: 12px;
-  border-color: rebeccapurple;
+  border-color: #2574a9;
   transition: background 0.3s ease, padding 0.3s ease, margin 0.3s ease;
 }
 .tabcordion-lego.tabcordion .tabcordion-tabs .tabcordion-tab a:hover {
-  background-color: #9470b8;
+  background-color: #669ec3;
 }
 .tabcordion-lego.tabcordion .tabcordion-tabs .tabcordion-tab.is-active a {
   background-color: #fff;
-  color: rebeccapurple;
+  color: #333;
   margin-bottom: -1px;
   padding-bottom: 15px;
-  border-color: rebeccapurple;
+  border-color: #e0e0e0;
 }
 .tabcordion .tabcordion-body-header {
   display: block;
   font-size: 16px;
   position: relative;
   z-index: 2;
-  border-bottom: 1px solid rebeccapurple;
+  border-bottom: 1px solid #e0e0e0;
 }
 .tabcordion .tabcordion-body-header:last-child {
   border-bottom: 0 none;
@@ -1829,15 +1886,15 @@ html {
 }
 .tabcordion-accordion.tabcordion .tabcordion-body-header {
   display: block;
-  border-bottom: 1px solid rebeccapurple;
+  border-bottom: 1px solid #e0e0e0;
 }
 .tabcordion .tabcordion-body-header .tabcordion-body-headline {
   display: block;
   padding: 13px 36px 13px 18px;
-  color: rebeccapurple;
+  color: #333;
   position: relative;
   transition: 0.3s ease;
-  background-color: rebeccapurple;
+  background-color: #fcfcfc;
 }
 .tabcordion .tabcordion-body-header .tabcordion-body-headline:before {
   content: " ";
@@ -1847,7 +1904,7 @@ html {
   right: 12px;
   display: inline-block;
   vertical-align: middle;
-  border-top: 8px solid rebeccapurple;
+  border-top: 8px solid #333;
   border-top-style: solid;
   border-right: 7px solid transparent;
   border-bottom: none;
@@ -1862,7 +1919,7 @@ html {
   right: 14px;
   display: inline-block;
   vertical-align: middle;
-  border-top: 6px solid rebeccapurple;
+  border-top: 6px solid #333;
   border-right: 5px solid transparent;
   border-bottom: none;
   border-left: 5px solid transparent;
@@ -1880,7 +1937,7 @@ html {
 .tabcordion .tabcordion-body-header .tabcordion-body-headline:hover {
   outline: none;
   text-decoration: none;
-  background-color: rebeccapurple;
+  background-color: #f9f9f9;
 }
 .tabcordion .tabcordion-body-header .tabcordion-body-headline:active {
   text-decoration: none;
@@ -1896,7 +1953,7 @@ html {
   left: 42px;
   display: inline-block;
   vertical-align: middle;
-  border-top: 16px solid rebeccapurple;
+  border-top: 16px solid #e0e0e0;
   border-top-style: solid;
   border-right: 12px solid transparent;
   border-bottom: none;
@@ -1911,27 +1968,27 @@ html {
   left: 42px;
   display: inline-block;
   vertical-align: middle;
-  border-top: 16px solid rebeccapurple;
+  border-top: 16px solid #fcfcfc;
   border-right: 12px solid transparent;
   border-bottom: none;
   border-left: 12px solid transparent;
   z-index: 2;
 }
 .tabcordion .tabcordion-body-header.is-active .tabcordion-body-headline:hover {
-  background-color: rebeccapurple;
+  background-color: #fcfcfc;
 }
 .tabcordion .tabcordion-body-header.is-active .tabcordion-body-headline:after {
   border-top-color: #fff;
 }
 .tabcordion-lego.tabcordion .tabcordion-body-header {
   transition: border 0.3s ease;
-  border-left: 12px solid rebeccapurple;
+  border-left: 12px solid #e0e0e0;
 }
 .tabcordion-lego.tabcordion .tabcordion-body-header .tabcordion-body-headline {
   padding-left: 12px;
 }
 .tabcordion-lego.tabcordion .tabcordion-body-header.is-active {
-  border-left-color: rebeccapurple;
+  border-left-color: #2574a9;
 }
 .tabcordion-lego.tabcordion .tabcordion-body-header.is-active .tabcordion-body-headline {
   background-color: #fff;
@@ -1945,14 +2002,14 @@ html {
   z-index: 1;
 }
 .tabcordion .collapsible-body .tabcordion-body {
-  border-top: 1px solid rebeccapurple;
-  border-bottom: 1px solid rebeccapurple;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
   padding: 24px 3.22%;
 }
 @media (min-width: 768px) {
   .tabcordion .collapsible-body .tabcordion-body {
-    border-right: 1px solid rebeccapurple;
-    border-left: 1px solid rebeccapurple;
+    border-right: 1px solid #e0e0e0;
+    border-left: 1px solid #e0e0e0;
   }
 }
 .tabcordion-accordion.tabcordion .collapsible-body .tabcordion-body {
@@ -1960,8 +2017,8 @@ html {
   border-left: 0 none;
 }
 .tabcordion-tabs.tabcordion .collapsible-body .tabcordion-body {
-  border-right: 1px solid rebeccapurple;
-  border-left: 1px solid rebeccapurple;
+  border-right: 1px solid #e0e0e0;
+  border-left: 1px solid #e0e0e0;
 }
 .tabcordion-lego.tabcordion .collapsible-body .tabcordion-body {
   border-top: 0 none;
@@ -1970,7 +2027,7 @@ html {
 }
 @media (min-width: 768px) {
   .tabcordion-lego.tabcordion .collapsible-body .tabcordion-body {
-    border-top: 1px solid rebeccapurple;
+    border-top: 1px solid #e0e0e0;
     padding-left: 3.22%;
   }
 }
@@ -1980,7 +2037,7 @@ html {
   padding-right: 24px;
 }
 .tabcordion-tabs.tabcordion-lego.tabcordion .collapsible-body .tabcordion-body {
-  border-top: 1px solid rebeccapurple;
+  border-top: 1px solid #e0e0e0;
   padding-left: 3.22%;
 }
 @media print {
