@@ -1628,7 +1628,7 @@
 
 //////////////////////////////////////| TEXT STYLING
 ._text-styling( @brand );
-/*!tabcordions v2.0.1 WBC*/
+/*!tabcordions v2.0.2 WBC*/
 /*
  * tabcordion-soft mixins
  *
@@ -1752,11 +1752,6 @@
 				display: table;
 				display: flex;
 				align-items: stretch;
-
-				&.tabcordion-tabs-justified {
-					width: 100%;
-					display: table;
-				}
 			}
 
 			.tabcordion-tabs& {
@@ -1810,16 +1805,8 @@
 			}
 
 			&.tabcordion-tabs-justified {
-				.tabcordion-tabs& {
-					display: table;
-				}
-
 				.tabcordion-tab {
-					display: table-cell;
-
-					a {
-						display: inline-block;
-					}
+					flex-grow: 1;
 				}
 			}
 

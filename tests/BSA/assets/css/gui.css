@@ -1705,7 +1705,7 @@ a:hover {
     width: auto;
   }
 }
-/*!tabcordions v2.0.1 BSA*/
+/*!tabcordions v2.0.2 BSA*/
 /*
  * tabcordion-soft mixins
  *
@@ -1802,10 +1802,6 @@ html {
         -ms-flex-align: stretch;
             align-items: stretch;
   }
-  .tabcordion .tabcordion-tabs.tabcordion-tabs-justified {
-    width: 100%;
-    display: table;
-  }
 }
 .tabcordion-tabs.tabcordion .tabcordion-tabs {
   display: table;
@@ -1864,14 +1860,10 @@ html {
   margin-bottom: -1px;
   padding-bottom: 15px;
 }
-.tabcordion-tabs.tabcordion .tabcordion-tabs.tabcordion-tabs-justified {
-  display: table;
-}
 .tabcordion .tabcordion-tabs.tabcordion-tabs-justified .tabcordion-tab {
-  display: table-cell;
-}
-.tabcordion .tabcordion-tabs.tabcordion-tabs-justified .tabcordion-tab a {
-  display: inline-block;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 .tabcordion-lego.tabcordion .tabcordion-tabs .tabcordion-tab a {
   background-color: #365fb4;
