@@ -20,6 +20,12 @@ module in our [GUI-source repo](https://github.com/WestpacCXTeam/GUI-source/issu
 
 ### Release History
 
+* v2.0.2 - `LESS/CSS` ~~`HTML`~~ ~~`JS`~~
+	* Tabcordions have this really neat class that makes all tabs equal heights which looks really rad! Unless it doesn’t work. Then it looks bad, less rad.
+		No more.
+		[#237](https://github.com/WestpacCXTeam/GUI-source/issues/237)
+	* Justified tabs unjustified in the modile breakpoint. That was deemed unjust and they now justify again! Justice served.
+		[#238](https://github.com/WestpacCXTeam/GUI-source/issues/238)
 * v2.0.1 - `LESS/CSS` ~~`HTML`~~ ~~`JS`~~
 	* Fanfare, Drum roll … We’ve added another brand. Yay! :clap:
 * v2.0.0 - `LESS/CSS` ~~`HTML`~~ ~~`JS`~~

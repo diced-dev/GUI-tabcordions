@@ -122,11 +122,6 @@
 				display: table;
 				display: flex;
 				align-items: stretch;
-
-				&.tabcordion-tabs-justified {
-					width: 100%;
-					display: table;
-				}
 			}
 
 			.tabcordion-tabs& {
@@ -180,16 +175,8 @@
 			}
 
 			&.tabcordion-tabs-justified {
-				.tabcordion-tabs& {
-					display: table;
-				}
-
 				.tabcordion-tab {
-					display: table-cell;
-
-					a {
-						display: inline-block;
-					}
+					flex-grow: 1;
 				}
 			}
 
