@@ -193,6 +193,7 @@
 			var $this = $(this);
 			var target = $this.attr('href') ? $this.attr('href') : $this.attr('data-collapsible');
 			var $tabcordion = $this.parents('.tabcordion')
+			var _hasScrollOffset = $tabcordion.attr('data-tabcordion-scroll') !== 'undefined' && $tabcordion.attr('data-tabcordion-scroll') !== 'none';
 
 			if( $tabcordion.length ) {
 				GUI.debugging( 'collapsible: Found to be inside tabcordion', 'report' );
@@ -216,10 +217,22 @@
 				//animating transition
 				if( _isAccordion ) {
 					GUI.collapsible.close( $tabs.filter('.is-open'), true );
-					GUI.collapsible.open( $tabcordion.find( target ), true, function scrollToTab() {
-						//scroll to top
-						$('html, body').animate({ scrollTop: ( $this.offset().top - 60 ) }, 300);
-					}, false);
+
+					if( _hasScrollOffset ) {
+						GUI.debugging( 'collapsible: Open accordion with scroll-to-content', 'report' );
+
+						var scrollOffset = $tabcordion.attr('data-tabcordion-scroll');
+
+						GUI.collapsible.open( $tabcordion.find( target ), true, function scrollToTab() {
+							//scroll to top
+							$('html, body').animate({ scrollTop: ( $this.offset().top - 60 - scrollOffset ) }, 300);
+						}, false);
+					}
+					else {
+						GUI.debugging( 'collapsible: Open accordion without scroll-to-content', 'report' );
+
+						GUI.collapsible.open( $tabcordion.find( target ), true, null, false);
+					}
 				}
 				else {
 					GUI.collapsible.close( $tabs.filter('.is-open'), false, function closingCallback() {
