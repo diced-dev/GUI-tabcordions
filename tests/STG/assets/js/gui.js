@@ -469,6 +469,9 @@ GUI.init();
 						GUI.debugging( 'collapsible: Open accordion with scroll-to-content', 'report' );
 
 						var scrollOffset = $tabcordion.attr('data-tabcordion-scroll');
+						if( scrollOffset === undefined ) {
+							scrollOffset = 0;
+						}
 
 						GUI.collapsible.open( $tabcordion.find( target ), true, function scrollToTab() {
 							//scroll to top
