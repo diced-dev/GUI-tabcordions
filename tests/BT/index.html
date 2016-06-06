@@ -82,7 +82,7 @@
 	<main class="container">
 <h2>Collapsible with buttons</h2>
 
-<button id="ex0-1-button" class="js-collapsible" data-collapsible="#ex0-1" aria-expanded="false" aria-selected="false" aria-controls="ex0-1" role="tab">toggle below</button>
+<button id="ex0-1-button" class="js-collapsible" data-collapsible="#ex0-1">toggle below</button>
 <div id="ex0-1" class="collapsible-body" tabindex="-1" aria-hidden="true" aria-labelledby="ex0-1-button">
 	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias provident, maxime qui aut doloremque eligendi ab odio labore, alias, ad eius incidunt
 	quibusdam dolore quidem neque accusamus voluptatibus, quam deleniti. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, repellat autem
@@ -155,18 +155,18 @@
 		<h2>Tabcordion tabs alone</h2>
 
 		<div class="tabcordion tabcordion-tabs">
-			<ul class="tabcordion-tabs">
-				<li class="tabcordion-tab js-collapsible-tab is-active">
-					<a class="js-collapsible" href="#ex1-tab1">Tab 1</a>
+			<ul class="tabcordion-tabs" role="tablist">
+				<li class="tabcordion-tab js-collapsible-tab is-active" role="presentation">
+					<a class="js-collapsible" href="#ex1-tab1" aria-expanded="true" aria-selected="true" aria-controls="ex1-tab1" role="tab">Tab 1</a>
 				</li>
-				<li class="tabcordion-tab js-collapsible-tab">
-					<a class="js-collapsible" href="#ex1-tab2">
+				<li class="tabcordion-tab js-collapsible-tab" role="presentation">
+					<a class="js-collapsible" href="#ex1-tab2" aria-expanded="false" aria-selected="false" aria-controls="ex1-tab2" role="tab">
 						Tab 2<br>
 						with line break
 					</a>
 				</li>
-				<li class="tabcordion-tab js-collapsible-tab">
-					<a class="js-collapsible" href="#ex1-tab3">Tab 3</a>
+				<li class="tabcordion-tab js-collapsible-tab" role="presentation">
+					<a class="js-collapsible" href="#ex1-tab3" aria-expanded="false" aria-selected="false" aria-controls="ex1-tab3" role="tab">Tab 3</a>
 				</li>
 			</ul>
 
@@ -231,15 +231,15 @@
 		<h2>Tabcordion tabs alone justified</h2>
 
 		<div class="tabcordion tabcordion-tabs">
-			<ul class="tabcordion-tabs tabcordion-tabs-justified">
-				<li class="tabcordion-tab js-collapsible-tab is-active">
-					<a class="js-collapsible" href="#ex2-tab1">Tab 1</a>
+			<ul class="tabcordion-tabs tabcordion-tabs-justified" role="tablist">
+				<li class="tabcordion-tab js-collapsible-tab is-active" role="presentation">
+					<a class="js-collapsible" href="#ex2-tab1" aria-expanded="true" aria-selected="true" aria-controls="ex2-tab1" role="tab">Tab 1</a>
 				</li>
-				<li class="tabcordion-tab js-collapsible-tab">
-					<a class="js-collapsible" href="#ex2-tab2">Tab 2 with really long text that goes a long way and then a bit</a>
+				<li class="tabcordion-tab js-collapsible-tab" role="presentation">
+					<a class="js-collapsible" href="#ex2-tab2" aria-expanded="false" aria-selected="false" aria-controls="ex2-tab2" role="tab">Tab 2 with really long text that goes a long way and then a bit</a>
 				</li>
-				<li class="tabcordion-tab js-collapsible-tab">
-					<a class="js-collapsible" href="#ex2-tab3">Tab 3</a>
+				<li class="tabcordion-tab js-collapsible-tab" role="presentation">
+					<a class="js-collapsible" href="#ex2-tab3" aria-expanded="false" aria-selected="false" aria-controls="ex2-tab3" role="tab">Tab 3</a>
 				</li>
 			</ul>
 
@@ -306,7 +306,7 @@
 
 		<div class="tabcordion tabcordion-accordion">
 			<div class="tabcordion-body-header js-collapsible-tab is-active">
-				<a href="#ex3-tab1" class="tabcordion-body-headline js-collapsible">Tab 1</a>
+				<a href="#ex3-tab1" class="tabcordion-body-headline js-collapsible" aria-expanded="true" aria-selected="true" aria-controls="ex3-tab1">Tab 1</a>
 			</div>
 			<div id="ex3-tab1" class="collapsible-body is-open" aria-hidden="false" tabindex="-1">
 				<div class="tabcordion-body">
@@ -328,7 +328,7 @@
 			</div>
 
 			<div class="tabcordion-body-header js-collapsible-tab">
-				<a href="#ex3-tab2" class="tabcordion-body-headline js-collapsible">
+				<a href="#ex3-tab2" class="tabcordion-body-headline js-collapsible" aria-expanded="false" aria-selected="false" aria-controls="ex3-tab2">
 					Tab 2<br>
 					with line break
 				</a>
@@ -363,7 +363,7 @@
 			</div>
 
 			<div class="tabcordion-body-header js-collapsible-tab">
-				<a href="#ex3-tab3" class="tabcordion-body-headline js-collapsible">Tab 3 with long text and whatnot to see the wrapping of the text</a>
+				<a href="#ex3-tab3" class="tabcordion-body-headline js-collapsible" aria-expanded="false" aria-selected="false" aria-controls="ex3-tab3">Tab 3 with long text and whatnot to see the wrapping of the text</a>
 			</div>
 			<div id="ex3-tab3" class="collapsible-body" aria-hidden="true" tabindex="-1">
 				<div class="tabcordion-body">
@@ -381,20 +381,20 @@
 		<h2>Tabcordion responsive</h2>
 
 		<div class="tabcordion">
-			<ul class="tabcordion-tabs">
-				<li class="tabcordion-tab js-collapsible-tab is-active">
-					<a class="js-collapsible" href="#ex4-tab1">Tab 1</a>
+			<ul class="tabcordion-tabs" role="tablist">
+				<li class="tabcordion-tab js-collapsible-tab is-active" role="presentation">
+					<a class="js-collapsible" href="#ex4-tab1" aria-expanded="true" aria-selected="true" aria-controls="ex4-tab1" role="tab">Tab 1</a>
 				</li>
-				<li class="tabcordion-tab js-collapsible-tab">
-					<a class="js-collapsible" href="#ex4-tab2">Tab 2</a>
+				<li class="tabcordion-tab js-collapsible-tab" role="presentation">
+					<a class="js-collapsible" href="#ex4-tab2" aria-expanded="false" aria-selected="false" aria-controls="ex4-tab2" role="tab">Tab 2</a>
 				</li>
-				<li class="tabcordion-tab js-collapsible-tab">
-					<a class="js-collapsible" href="#ex4-tab3">Tab 3</a>
+				<li class="tabcordion-tab js-collapsible-tab" role="presentation">
+					<a class="js-collapsible" href="#ex4-tab3" aria-expanded="false" aria-selected="false" aria-controls="ex4-tab3" role="tab">Tab 3</a>
 				</li>
 			</ul>
 
 			<div class="tabcordion-body-header js-collapsible-tab is-active">
-				<a href="#ex4-tab1" class="tabcordion-body-headline js-collapsible">Tab 1</a>
+				<a href="#ex4-tab1" class="tabcordion-body-headline js-collapsible" aria-expanded="true" aria-selected="true" aria-controls="ex4-tab1">Tab 1</a>
 			</div>
 			<div id="ex4-tab1" class="collapsible-body is-open" aria-hidden="false" tabindex="-1">
 				<div class="tabcordion-body">
@@ -416,7 +416,7 @@
 			</div>
 
 			<div class="tabcordion-body-header js-collapsible-tab">
-				<a href="#ex4-tab2" class="tabcordion-body-headline js-collapsible">Tab 2</a>
+				<a href="#ex4-tab2" class="tabcordion-body-headline js-collapsible" aria-expanded="false" aria-selected="false" aria-controls="ex4-tab2">Tab 2</a>
 			</div>
 			<div id="ex4-tab2" class="collapsible-body" aria-hidden="true" tabindex="-1">
 				<div class="tabcordion-body">
@@ -448,7 +448,7 @@
 			</div>
 
 			<div class="tabcordion-body-header js-collapsible-tab">
-				<a href="#ex4-tab3" class="tabcordion-body-headline js-collapsible">Tab 3</a>
+				<a href="#ex4-tab3" class="tabcordion-body-headline js-collapsible" aria-expanded="false" aria-selected="false" aria-controls="ex4-tab3">Tab 3</a>
 			</div>
 			<div id="ex4-tab3" class="collapsible-body" aria-hidden="true" tabindex="-1">
 				<div class="tabcordion-body">
@@ -466,7 +466,7 @@
 
 		<div class="tabcordion tabcordion-accordion" data-tabcordion-scroll="100">
 			<div class="tabcordion-body-header js-collapsible-tab is-active">
-				<a href="#ex11-tab1" class="tabcordion-body-headline js-collapsible">Tab 1</a>
+				<a href="#ex11-tab1" class="tabcordion-body-headline js-collapsible" aria-expanded="true" aria-selected="true" aria-controls="ex11-tab1">Tab 1</a>
 			</div>
 			<div id="ex11-tab1" class="collapsible-body is-open" aria-hidden="false" tabindex="-1">
 				<div class="tabcordion-body">
@@ -475,7 +475,7 @@
 			</div>
 
 			<div class="tabcordion-body-header js-collapsible-tab">
-				<a href="#ex11-tab2" class="tabcordion-body-headline js-collapsible">
+				<a href="#ex11-tab2" class="tabcordion-body-headline js-collapsible" aria-expanded="false" aria-selected="false" aria-controls="ex11-tab2">
 					Tab 2<br>
 					with line break
 				</a>
@@ -487,7 +487,9 @@
 			</div>
 
 			<div class="tabcordion-body-header js-collapsible-tab">
-				<a href="#ex11-tab3" class="tabcordion-body-headline js-collapsible">Tab 3 with long text and whatnot to see the wrapping of the text</a>
+				<a href="#ex11-tab3" class="tabcordion-body-headline js-collapsible" aria-expanded="false" aria-selected="false" aria-controls="ex11-tab3">
+					Tab 3 with long text and whatnot to see the wrapping of the text
+				</a>
 			</div>
 			<div id="ex11-tab3" class="collapsible-body" aria-hidden="true" tabindex="-1">
 				<div class="tabcordion-body">
@@ -496,7 +498,9 @@
 			</div>
 
 			<div class="tabcordion-body-header js-collapsible-tab">
-				<a href="#ex11-tab4" class="tabcordion-body-headline js-collapsible">Tab 4 with long text and whatnot to see the wrapping of the text</a>
+				<a href="#ex11-tab4" class="tabcordion-body-headline js-collapsible" aria-expanded="false" aria-selected="false" aria-controls="ex11-tab4">
+					Tab 4 with long text and whatnot to see the wrapping of the text
+				</a>
 			</div>
 			<div id="ex11-tab4" class="collapsible-body" aria-hidden="true" tabindex="-1">
 				<div class="tabcordion-body">
@@ -510,17 +514,17 @@
 		<h2>Tabcordion lego responsive with scroll offset by 200</h2>
 
 		<div class="tabcordion" data-tabcordion-scroll="200">
-			<ul class="tabcordion-tabs">
-				<li class="tabcordion-tab js-collapsible-tab is-active">
-					<a class="js-collapsible" href="#ex12-tab1">Tab 1</a>
+			<ul class="tabcordion-tabs" role="tablist">
+				<li class="tabcordion-tab js-collapsible-tab is-active" role="presentation">
+					<a class="js-collapsible" href="#ex12-tab1" aria-expanded="true" aria-selected="true" aria-controls="ex12-tab1" role="tab">Tab 1</a>
 				</li>
-				<li class="tabcordion-tab js-collapsible-tab">
-					<a class="js-collapsible" href="#ex12-tab2">Tab 2</a>
+				<li class="tabcordion-tab js-collapsible-tab" role="presentation">
+					<a class="js-collapsible" href="#ex12-tab2" aria-expanded="false" aria-selected="false" aria-controls="ex12-tab2" role="tab">Tab 2</a>
 				</li>
 			</ul>
 
 			<div class="tabcordion-body-header js-collapsible-tab is-active">
-				<a href="#ex12-tab1" class="tabcordion-body-headline js-collapsible">Tab 1</a>
+				<a href="#ex12-tab1" class="tabcordion-body-headline js-collapsible" aria-expanded="true" aria-selected="true" aria-controls="ex12-tab1">Tab 1</a>
 			</div>
 			<div id="ex12-tab1" class="collapsible-body is-open" aria-hidden="false" tabindex="-1">
 				<div class="tabcordion-body">
@@ -529,7 +533,7 @@
 			</div>
 
 			<div class="tabcordion-body-header js-collapsible-tab">
-				<a href="#ex12-tab2" class="tabcordion-body-headline js-collapsible">Tab 2</a>
+				<a href="#ex12-tab2" class="tabcordion-body-headline js-collapsible" aria-expanded="false" aria-selected="false" aria-controls="ex12-tab2">Tab 2</a>
 			</div>
 			<div id="ex12-tab2" class="collapsible-body" aria-hidden="true" tabindex="-1">
 				<div class="tabcordion-body">
@@ -545,18 +549,18 @@
 		<h2>Tabcordion lego tabs alone</h2>
 
 		<div class="tabcordion tabcordion-lego tabcordion-tabs">
-			<ul class="tabcordion-tabs">
-				<li class="tabcordion-tab js-collapsible-tab is-active">
-					<a class="js-collapsible" href="#ex5-tab1">Tab 1</a>
+			<ul class="tabcordion-tabs" role="tablist">
+				<li class="tabcordion-tab js-collapsible-tab is-active" role="presentation">
+					<a class="js-collapsible" href="#ex5-tab1" aria-expanded="true" aria-selected="true" aria-controls="ex5-tab1" role="tab">Tab 1</a>
 				</li>
-				<li class="tabcordion-tab js-collapsible-tab">
-					<a class="js-collapsible" href="#ex5-tab2">
+				<li class="tabcordion-tab js-collapsible-tab" role="presentation">
+					<a class="js-collapsible" href="#ex5-tab2" aria-expanded="false" aria-selected="false" aria-controls="ex5-tab2" role="tab">
 						Tab 2<br>
 						with line break
 					</a>
 				</li>
-				<li class="tabcordion-tab js-collapsible-tab">
-					<a class="js-collapsible" href="#ex5-tab3">Tab 3</a>
+				<li class="tabcordion-tab js-collapsible-tab" role="presentation">
+					<a class="js-collapsible" href="#ex5-tab3" aria-expanded="false" aria-selected="false" aria-controls="ex5-tab3" role="tab">Tab 3</a>
 				</li>
 			</ul>
 
@@ -622,15 +626,17 @@
 		<h2>Tabcordion lego tabs alone justified</h2>
 
 		<div class="tabcordion tabcordion-lego tabcordion-tabs">
-			<ul class="tabcordion-tabs tabcordion-tabs-justified">
-				<li class="tabcordion-tab js-collapsible-tab is-active">
-					<a class="js-collapsible" href="#ex6-tab1">Tab 1</a>
+			<ul class="tabcordion-tabs tabcordion-tabs-justified" role="tablist">
+				<li class="tabcordion-tab js-collapsible-tab is-active" role="presentation">
+					<a class="js-collapsible" href="#ex6-tab1" aria-expanded="true" aria-selected="true" aria-controls="ex6-tab1" role="tab">Tab 1</a>
 				</li>
-				<li class="tabcordion-tab js-collapsible-tab">
-					<a class="js-collapsible" href="#ex6-tab2">Tab 2<br>with really long text</a>
+				<li class="tabcordion-tab js-collapsible-tab" role="presentation">
+					<a class="js-collapsible" href="#ex6-tab2" aria-expanded="false" aria-selected="false" aria-controls="ex6-tab2" role="tab">
+						Tab 2<br>with really long text
+					</a>
 				</li>
-				<li class="tabcordion-tab js-collapsible-tab">
-					<a class="js-collapsible" href="#ex6-tab3">Tab 3</a>
+				<li class="tabcordion-tab js-collapsible-tab" role="presentation">
+					<a class="js-collapsible" href="#ex6-tab3" aria-expanded="false" aria-selected="false" aria-controls="ex6-tab3" role="tab">Tab 3</a>
 				</li>
 			</ul>
 
@@ -697,7 +703,7 @@
 
 		<div class="tabcordion tabcordion-lego tabcordion-accordion">
 			<div class="tabcordion-body-header js-collapsible-tab is-active">
-				<a href="#ex7-tab1" class="tabcordion-body-headline js-collapsible">Tab 1</a>
+				<a href="#ex7-tab1" class="tabcordion-body-headline js-collapsible" aria-expanded="true" aria-selected="true" aria-controls="ex7-tab1">Tab 1</a>
 			</div>
 			<div id="ex7-tab1" class="collapsible-body is-open" aria-hidden="false" tabindex="-1">
 				<div class="tabcordion-body">
@@ -719,7 +725,7 @@
 			</div>
 
 			<div class="tabcordion-body-header js-collapsible-tab">
-				<a href="#ex7-tab2" class="tabcordion-body-headline js-collapsible">
+				<a href="#ex7-tab2" class="tabcordion-body-headline js-collapsible" aria-expanded="false" aria-selected="false" aria-controls="ex7-tab2">
 					Tab 2<br>
 					with line break
 				</a>
@@ -754,7 +760,9 @@
 			</div>
 
 			<div class="tabcordion-body-header js-collapsible-tab">
-				<a href="#ex7-tab3" class="tabcordion-body-headline js-collapsible">Tab 3 with long text and whatnot to see the wrapping of the text</a>
+				<a href="#ex7-tab3" class="tabcordion-body-headline js-collapsible" aria-expanded="false" aria-selected="false" aria-controls="ex7-tab3">
+					Tab 3 with long text and whatnot to see the wrapping of the text
+				</a>
 			</div>
 			<div id="ex7-tab3" class="collapsible-body" aria-hidden="true" tabindex="-1">
 				<div class="tabcordion-body">
@@ -772,20 +780,20 @@
 		<h2>Tabcordion lego responsive</h2>
 
 		<div class="tabcordion tabcordion-lego">
-			<ul class="tabcordion-tabs">
-				<li class="tabcordion-tab js-collapsible-tab is-active">
-					<a class="js-collapsible" href="#ex8-tab1">Tab 1</a>
+			<ul class="tabcordion-tabs" role="tablist">
+				<li class="tabcordion-tab js-collapsible-tab is-active" role="presentation">
+					<a class="js-collapsible" href="#ex8-tab1" aria-expanded="true" aria-selected="true" aria-controls="ex8-tab1" role="tab">Tab 1</a>
 				</li>
-				<li class="tabcordion-tab js-collapsible-tab">
-					<a class="js-collapsible" href="#ex8-tab2">Tab 2</a>
+				<li class="tabcordion-tab js-collapsible-tab" role="presentation">
+					<a class="js-collapsible" href="#ex8-tab2" aria-expanded="false" aria-selected="false" aria-controls="ex8-tab2" role="tab">Tab 2</a>
 				</li>
-				<li class="tabcordion-tab js-collapsible-tab">
-					<a class="js-collapsible" href="#ex8-tab3">Tab 3</a>
+				<li class="tabcordion-tab js-collapsible-tab" role="presentation">
+					<a class="js-collapsible" href="#ex8-tab3" aria-expanded="false" aria-selected="false" aria-controls="ex8-tab3" role="tab">Tab 3</a>
 				</li>
 			</ul>
 
 			<div class="tabcordion-body-header js-collapsible-tab is-active">
-				<a href="#ex8-tab1" class="tabcordion-body-headline js-collapsible">Tab 1</a>
+				<a href="#ex8-tab1" class="tabcordion-body-headline js-collapsible" aria-expanded="true" aria-selected="true" aria-controls="ex8-tab1">Tab 1</a>
 			</div>
 			<div id="ex8-tab1" class="collapsible-body is-open" aria-hidden="false" tabindex="-1">
 				<div class="tabcordion-body">
@@ -807,7 +815,7 @@
 			</div>
 
 			<div class="tabcordion-body-header js-collapsible-tab">
-				<a href="#ex8-tab2" class="tabcordion-body-headline js-collapsible">Tab 2</a>
+				<a href="#ex8-tab2" class="tabcordion-body-headline js-collapsible" aria-expanded="false" aria-selected="false" aria-controls="ex8-tab2">Tab 2</a>
 			</div>
 			<div id="ex8-tab2" class="collapsible-body" aria-hidden="true" tabindex="-1">
 				<div class="tabcordion-body">
@@ -839,7 +847,7 @@
 			</div>
 
 			<div class="tabcordion-body-header js-collapsible-tab">
-				<a href="#ex8-tab3" class="tabcordion-body-headline js-collapsible">Tab 3</a>
+				<a href="#ex8-tab3" class="tabcordion-body-headline js-collapsible" aria-expanded="false" aria-selected="false" aria-controls="ex8-tab3">Tab 3</a>
 			</div>
 			<div id="ex8-tab3" class="collapsible-body" aria-hidden="true" tabindex="-1">
 				<div class="tabcordion-body">
@@ -857,7 +865,7 @@
 
 		<div class="tabcordion tabcordion-lego tabcordion-accordion" data-tabcordion-scroll="none">
 			<div class="tabcordion-body-header js-collapsible-tab">
-				<a href="#ex9-tab1" class="tabcordion-body-headline js-collapsible">Tab 1</a>
+				<a href="#ex9-tab1" class="tabcordion-body-headline js-collapsible" aria-expanded="true" aria-selected="true" aria-controls="ex9-tab1">Tab 1</a>
 			</div>
 			<div id="ex9-tab1" class="collapsible-body" aria-hidden="false" tabindex="-1">
 				<div class="tabcordion-body">
@@ -866,7 +874,7 @@
 			</div>
 
 			<div class="tabcordion-body-header js-collapsible-tab">
-				<a href="#ex9-tab2" class="tabcordion-body-headline js-collapsible">
+				<a href="#ex9-tab2" class="tabcordion-body-headline js-collapsible" aria-expanded="false" aria-selected="false" aria-controls="ex9-tab2">
 					Tab 2<br>
 					with line break
 				</a>
@@ -878,7 +886,9 @@
 			</div>
 
 			<div class="tabcordion-body-header js-collapsible-tab is-active">
-				<a href="#ex9-tab3" class="tabcordion-body-headline js-collapsible">Tab 3 with long text and whatnot to see the wrapping of the text</a>
+				<a href="#ex9-tab3" class="tabcordion-body-headline js-collapsible" aria-expanded="false" aria-selected="false" aria-controls="ex9-tab3">
+					Tab 3 with long text and whatnot to see the wrapping of the text
+				</a>
 			</div>
 			<div id="ex9-tab3" class="collapsible-body is-open" aria-hidden="true" tabindex="-1">
 				<div class="tabcordion-body">
@@ -887,7 +897,9 @@
 			</div>
 
 			<div class="tabcordion-body-header js-collapsible-tab">
-				<a href="#ex9-tab4" class="tabcordion-body-headline js-collapsible">Tab 4 with long text and whatnot to see the wrapping of the text</a>
+				<a href="#ex9-tab4" class="tabcordion-body-headline js-collapsible" aria-expanded="false" aria-selected="false" aria-controls="ex9-tab4">
+					Tab 4 with long text and whatnot to see the wrapping of the text
+				</a>
 			</div>
 			<div id="ex9-tab4" class="collapsible-body" aria-hidden="true" tabindex="-1">
 				<div class="tabcordion-body">
@@ -901,17 +913,17 @@
 		<h2>Tabcordion lego responsive with scroll disabled</h2>
 
 		<div class="tabcordion tabcordion-lego" data-tabcordion-scroll="none">
-			<ul class="tabcordion-tabs">
-				<li class="tabcordion-tab js-collapsible-tab">
-					<a class="js-collapsible" href="#ex10-tab1">Tab 1</a>
+			<ul class="tabcordion-tabs" role="tablist">
+				<li class="tabcordion-tab js-collapsible-tab" role="presentation">
+					<a class="js-collapsible" href="#ex10-tab1" aria-expanded="true" aria-selected="true" aria-controls="ex10-tab1" role="tab">Tab 1</a>
 				</li>
-				<li class="tabcordion-tab js-collapsible-tab is-active">
-					<a class="js-collapsible" href="#ex10-tab2">Tab 2</a>
+				<li class="tabcordion-tab js-collapsible-tab is-active" role="presentation">
+					<a class="js-collapsible" href="#ex10-tab2" aria-expanded="false" aria-selected="false" aria-controls="ex10-tab2" role="tab">Tab 2</a>
 				</li>
 			</ul>
 
 			<div class="tabcordion-body-header js-collapsible-tab">
-				<a href="#ex10-tab1" class="tabcordion-body-headline js-collapsible">Tab 1</a>
+				<a href="#ex10-tab1" class="tabcordion-body-headline js-collapsible" aria-expanded="true" aria-selected="true" aria-controls="ex10-tab1">Tab 1</a>
 			</div>
 			<div id="ex10-tab1" class="collapsible-body" aria-hidden="false" tabindex="-1">
 				<div class="tabcordion-body">
@@ -920,7 +932,7 @@
 			</div>
 
 			<div class="tabcordion-body-header js-collapsible-tab is-active">
-				<a href="#ex10-tab2" class="tabcordion-body-headline js-collapsible">Tab 2</a>
+				<a href="#ex10-tab2" class="tabcordion-body-headline js-collapsible" aria-expanded="false" aria-selected="false" aria-controls="ex10-tab2">Tab 2</a>
 			</div>
 			<div id="ex10-tab2" class="collapsible-body is-open" aria-hidden="true" tabindex="-1">
 				<div class="tabcordion-body">
