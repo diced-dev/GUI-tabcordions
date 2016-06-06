@@ -16,7 +16,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-	<title>Testing tabcordions v2.0.2 BT</title>
+	<title>Testing tabcordions v3.0.0 BT</title>
 
 	<script type="text/javascript">
 		var $html = document.documentElement;
@@ -75,15 +75,15 @@
 			<a class="nav" href="http://westpaccxteam.github.io/GUI-source/">
 				&#8672; Back to the GUI source list
 			</a>
-			<h1 class="headline">Testing tabcordions v2.0.2 BT</h1>
+			<h1 class="headline">Testing tabcordions v3.0.0 BT</h1>
 		</div>
 	</header>
 
 	<main class="container">
 <h2>Collapsible with buttons</h2>
 
-<button class="js-collapsible" data-collapsible="#ex0-1">toggle below</button>
-<div id="ex0-1" class="collapsible-body" aria-hidden="true" tabindex="-1">
+<button id="ex0-1-button" class="js-collapsible" data-collapsible="#ex0-1" aria-expanded="false" aria-selected="false" aria-controls="ex0-1" role="tab">toggle below</button>
+<div id="ex0-1" class="collapsible-body" tabindex="-1" aria-hidden="true" aria-labelledby="ex0-1-button">
 	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias provident, maxime qui aut doloremque eligendi ab odio labore, alias, ad eius incidunt
 	quibusdam dolore quidem neque accusamus voluptatibus, quam deleniti. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, repellat autem
 	animi asperiores sed delectus consectetur optio repudiandae amet illo deleniti voluptas officiis, sapiente quo sequi iste qui, rem iure! Lorem ipsum dolor
@@ -496,7 +496,7 @@
 			</div>
 
 			<div class="tabcordion-body-header js-collapsible-tab">
-				<a href="#ex11-tab4" class="tabcordion-body-headline js-collapsible">Tab 3 with long text and whatnot to see the wrapping of the text</a>
+				<a href="#ex11-tab4" class="tabcordion-body-headline js-collapsible">Tab 4 with long text and whatnot to see the wrapping of the text</a>
 			</div>
 			<div id="ex11-tab4" class="collapsible-body" aria-hidden="true" tabindex="-1">
 				<div class="tabcordion-body">
@@ -856,10 +856,10 @@
 		<h2>Tabcordion lego accordion alone with scroll disabled</h2>
 
 		<div class="tabcordion tabcordion-lego tabcordion-accordion" data-tabcordion-scroll="none">
-			<div class="tabcordion-body-header js-collapsible-tab is-active">
+			<div class="tabcordion-body-header js-collapsible-tab">
 				<a href="#ex9-tab1" class="tabcordion-body-headline js-collapsible">Tab 1</a>
 			</div>
-			<div id="ex9-tab1" class="collapsible-body is-open" aria-hidden="false" tabindex="-1">
+			<div id="ex9-tab1" class="collapsible-body" aria-hidden="false" tabindex="-1">
 				<div class="tabcordion-body">
 					Stuff
 				</div>
@@ -877,17 +877,17 @@
 				</div>
 			</div>
 
-			<div class="tabcordion-body-header js-collapsible-tab">
+			<div class="tabcordion-body-header js-collapsible-tab is-active">
 				<a href="#ex9-tab3" class="tabcordion-body-headline js-collapsible">Tab 3 with long text and whatnot to see the wrapping of the text</a>
 			</div>
-			<div id="ex9-tab3" class="collapsible-body" aria-hidden="true" tabindex="-1">
+			<div id="ex9-tab3" class="collapsible-body is-open" aria-hidden="true" tabindex="-1">
 				<div class="tabcordion-body">
 					Stuff
 				</div>
 			</div>
 
 			<div class="tabcordion-body-header js-collapsible-tab">
-				<a href="#ex9-tab4" class="tabcordion-body-headline js-collapsible">Tab 3 with long text and whatnot to see the wrapping of the text</a>
+				<a href="#ex9-tab4" class="tabcordion-body-headline js-collapsible">Tab 4 with long text and whatnot to see the wrapping of the text</a>
 			</div>
 			<div id="ex9-tab4" class="collapsible-body" aria-hidden="true" tabindex="-1">
 				<div class="tabcordion-body">
@@ -902,27 +902,27 @@
 
 		<div class="tabcordion tabcordion-lego" data-tabcordion-scroll="none">
 			<ul class="tabcordion-tabs">
-				<li class="tabcordion-tab js-collapsible-tab is-active">
+				<li class="tabcordion-tab js-collapsible-tab">
 					<a class="js-collapsible" href="#ex10-tab1">Tab 1</a>
 				</li>
-				<li class="tabcordion-tab js-collapsible-tab">
+				<li class="tabcordion-tab js-collapsible-tab is-active">
 					<a class="js-collapsible" href="#ex10-tab2">Tab 2</a>
 				</li>
 			</ul>
 
-			<div class="tabcordion-body-header js-collapsible-tab is-active">
+			<div class="tabcordion-body-header js-collapsible-tab">
 				<a href="#ex10-tab1" class="tabcordion-body-headline js-collapsible">Tab 1</a>
 			</div>
-			<div id="ex10-tab1" class="collapsible-body is-open" aria-hidden="false" tabindex="-1">
+			<div id="ex10-tab1" class="collapsible-body" aria-hidden="false" tabindex="-1">
 				<div class="tabcordion-body">
 					Stuff
 				</div>
 			</div>
 
-			<div class="tabcordion-body-header js-collapsible-tab">
+			<div class="tabcordion-body-header js-collapsible-tab is-active">
 				<a href="#ex10-tab2" class="tabcordion-body-headline js-collapsible">Tab 2</a>
 			</div>
-			<div id="ex10-tab2" class="collapsible-body" aria-hidden="true" tabindex="-1">
+			<div id="ex10-tab2" class="collapsible-body is-open" aria-hidden="true" tabindex="-1">
 				<div class="tabcordion-body">
 					Stuff
 				</div>
