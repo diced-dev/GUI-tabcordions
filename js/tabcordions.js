@@ -253,6 +253,17 @@
 					.find('.js-collapsible[data-collapsible="' + target + '"], .js-collapsible[href="' + target + '"]')
 					.parents('.js-collapsible-tab')
 					.addClass('is-active');
+
+				//changing aria attributes
+				$tabcordion
+					.find('.js-collapsible')
+					.attr('aria-selected', false)
+					.attr('aria-expanded', false);
+
+				$tabcordion
+					.find('.js-collapsible[data-collapsible="' + target + '"], .js-collapsible[href="' + target + '"]')
+					.attr('aria-selected', true)
+					.attr('aria-expanded', true);
 			}
 			else {
 				GUI.debugging( 'collapsible: Triggering pure toggle', 'report' );
