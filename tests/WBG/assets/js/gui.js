@@ -245,7 +245,7 @@ var GUI = (function guiInit() {
 
 //run GUI
 GUI.init();
-/*!tabcordions v2.0.2*/
+/*!tabcordions v3.0.0*/
 /***************************************************************************************************************************************************************
  *
  * tabcordion-soft
@@ -494,11 +494,15 @@ GUI.init();
 				$tabcordion
 					.find('.js-collapsible')
 					.parents('.js-collapsible-tab')
+					.attr('aria-selected', false)
+					.attr('aria-expanded', false)
 					.removeClass('is-active');
 
 				$tabcordion
 					.find('.js-collapsible[data-collapsible="' + target + '"], .js-collapsible[href="' + target + '"]')
 					.parents('.js-collapsible-tab')
+					.attr('aria-selected', true)
+					.attr('aria-expanded', true)
 					.addClass('is-active');
 			}
 			else {

@@ -1044,7 +1044,7 @@
     padding-left: 24px;
   }
 }
-/*! _text-styling v2.0.1 */
+/*!_text-styling v3.0.0*/
 /*! normalize.css v4.0.0 | MIT License | github.com/necolas/normalize.css */
 /**
 	 * 1. Change the default font family in all browsers (opinionated).
@@ -1407,8 +1407,7 @@ textarea {
 [type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
-.h1,
-h1 {
+.h1 {
   font-size: 30px;
   color: #7e7357;
   font-family: "stag", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
@@ -1419,17 +1418,14 @@ h1 {
   -moz-osx-font-smoothing: grayscale;
 }
 @media (min-width: 768px) {
-  .h1,
-  h1 {
+  .h1 {
     font-size: 36px;
   }
 }
-.h1.body-font,
-h1.body-font {
+.h1.body-font {
   font-weight: 700;
 }
-.h2,
-h2 {
+.h2 {
   font-size: 24px;
   color: #7e7357;
   font-family: "stag", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
@@ -1440,17 +1436,14 @@ h2 {
   -moz-osx-font-smoothing: grayscale;
 }
 @media (min-width: 768px) {
-  .h2,
-  h2 {
+  .h2 {
     font-size: 30px;
   }
 }
-.h2.body-font,
-h2.body-font {
+.h2.body-font {
   font-weight: 700;
 }
-.h3,
-h3 {
+.h3 {
   font-size: 18px;
   color: #7e7357;
   font-family: "stag", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
@@ -1461,17 +1454,14 @@ h3 {
   -moz-osx-font-smoothing: grayscale;
 }
 @media (min-width: 768px) {
-  .h3,
-  h3 {
+  .h3 {
     font-size: 24px;
   }
 }
-.h3.body-font,
-h3.body-font {
+.h3.body-font {
   font-weight: 700;
 }
-.h4,
-h4 {
+.h4 {
   font-size: 16px;
   color: #4d5157;
   font-family: "stag", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
@@ -1482,17 +1472,14 @@ h4 {
   -moz-osx-font-smoothing: grayscale;
 }
 @media (min-width: 768px) {
-  .h4,
-  h4 {
+  .h4 {
     font-size: 18px;
   }
 }
-.h4.body-font,
-h4.body-font {
+.h4.body-font {
   font-weight: 700;
 }
-.h5,
-h5 {
+.h5 {
   font-size: 16px;
   color: #4d5157;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
@@ -1502,12 +1489,10 @@ h5 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.h5.body-font,
-h5.body-font {
+.h5.body-font {
   font-weight: 700;
 }
-.h6,
-h6 {
+.h6 {
   font-size: 14px;
   color: #4d5157;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
@@ -1517,8 +1502,7 @@ h6 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.h6.body-font,
-h6.body-font {
+.h6.body-font {
   font-weight: 700;
 }
 h1,
@@ -1532,8 +1516,7 @@ h6 {
 /*
 	 *  SETTINGS
 	 */
-.h1,
-h1 {
+.h1 {
   font-size: 30px;
   color: #7e7357;
   font-family: "stag", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
@@ -1544,17 +1527,14 @@ h1 {
   -moz-osx-font-smoothing: grayscale;
 }
 @media (min-width: 768px) {
-  .h1,
-  h1 {
+  .h1 {
     font-size: 36px;
   }
 }
-.h1.body-font,
-h1.body-font {
+.h1.body-font {
   font-weight: 700;
 }
-.h2,
-h2 {
+.h2 {
   font-size: 24px;
   color: #7e7357;
   font-family: "stag", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
@@ -1565,17 +1545,14 @@ h2 {
   -moz-osx-font-smoothing: grayscale;
 }
 @media (min-width: 768px) {
-  .h2,
-  h2 {
+  .h2 {
     font-size: 30px;
   }
 }
-.h2.body-font,
-h2.body-font {
+.h2.body-font {
   font-weight: 700;
 }
-.h3,
-h3 {
+.h3 {
   font-size: 18px;
   color: #7e7357;
   font-family: "stag", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
@@ -1586,17 +1563,14 @@ h3 {
   -moz-osx-font-smoothing: grayscale;
 }
 @media (min-width: 768px) {
-  .h3,
-  h3 {
+  .h3 {
     font-size: 24px;
   }
 }
-.h3.body-font,
-h3.body-font {
+.h3.body-font {
   font-weight: 700;
 }
-.h4,
-h4 {
+.h4 {
   font-size: 16px;
   color: #4d5157;
   font-family: "stag", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
@@ -1607,17 +1581,14 @@ h4 {
   -moz-osx-font-smoothing: grayscale;
 }
 @media (min-width: 768px) {
-  .h4,
-  h4 {
+  .h4 {
     font-size: 18px;
   }
 }
-.h4.body-font,
-h4.body-font {
+.h4.body-font {
   font-weight: 700;
 }
-.h5,
-h5 {
+.h5 {
   font-size: 16px;
   color: #4d5157;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
@@ -1627,12 +1598,10 @@ h5 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.h5.body-font,
-h5.body-font {
+.h5.body-font {
   font-weight: 700;
 }
-.h6,
-h6 {
+.h6 {
   font-size: 14px;
   color: #4d5157;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
@@ -1642,15 +1611,11 @@ h6 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.h6.body-font,
-h6.body-font {
+.h6.body-font {
   font-weight: 700;
 }
-html {
-  font-size: 6px;
-}
 body {
-  font-size: 14px;
+  font-size: 0.875em;
   line-height: 1.428571429;
   color: #20262d;
   background-color: #f0f1f2;
@@ -1671,6 +1636,9 @@ blockquote {
 mark {
   background-color: #f0ded7;
 }
+p {
+  margin: 0.8571428572em 0;
+}
 dl dt {
   font-weight: 700;
 }
@@ -1685,7 +1653,7 @@ dl dd {
 }
 a {
   color: #b45c38;
-  text-decoration: none;
+  text-decoration: underline;
 }
 a:hover,
 a:focus {
@@ -1767,7 +1735,7 @@ a:hover {
     width: auto;
   }
 }
-/*!tabcordions v2.0.2 BOM*/
+/*!tabcordions v3.0.0 BOM*/
 /*
  * tabcordion-soft mixins
  *
@@ -1780,8 +1748,7 @@ a:hover {
   overflow: hidden;
   opacity: 0;
   visibility: hidden;
-  -webkit-transform: translateZ(0);
-          transform: translateZ(0);
+  transform: translateZ(0);
   transition: opacity 0.4s ease, visibility 0.4s ease;
 }
 .js .collapsible-body.is-open {
@@ -1857,26 +1824,21 @@ html {
 @media (min-width: 768px) {
   .tabcordion .tabcordion-tabs {
     display: table;
-    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-align-items: stretch;
-        -ms-flex-align: stretch;
-            align-items: stretch;
+    -ms-flex-align: stretch;
+        align-items: stretch;
   }
 }
 .tabcordion-tabs.tabcordion .tabcordion-tabs {
   display: table;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
+  -ms-flex-align: stretch;
+      align-items: stretch;
 }
 .tabcordion .tabcordion-tabs .tabcordion-tab {
   display: table-cell;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   text-align: left;
@@ -1888,12 +1850,10 @@ html {
 }
 .tabcordion .tabcordion-tabs .tabcordion-tab a {
   display: inline-block;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: flex-end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -ms-flex-align: end;
+      align-items: flex-end;
   padding: 14px 18px 14px 18px;
   color: #20262d;
   background-color: #f7f8f9;
@@ -1903,10 +1863,10 @@ html {
   border-top-left-radius: 6px;
   transition: background 0.3s ease;
   width: 100%;
+  text-decoration: none;
 }
 .tabcordion .tabcordion-tabs .tabcordion-tab a:focus {
   outline: none;
-  text-decoration: none;
 }
 .is-keyboarduser .tabcordion .tabcordion-tabs .tabcordion-tab a:focus {
   outline: 2px dotted #000;
@@ -1923,9 +1883,8 @@ html {
   padding-bottom: 15px;
 }
 .tabcordion .tabcordion-tabs.tabcordion-tabs-justified .tabcordion-tab {
-  -webkit-flex-grow: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  -ms-flex-positive: 1;
+      flex-grow: 1;
 }
 .tabcordion-lego.tabcordion .tabcordion-tabs .tabcordion-tab a {
   background-color: #444f5e;
@@ -1973,6 +1932,7 @@ html {
   position: relative;
   transition: 0.3s ease;
   background-color: #f7f8f9;
+  text-decoration: none;
 }
 .tabcordion .tabcordion-body-header .tabcordion-body-headline:before {
   content: " ";
@@ -2006,7 +1966,6 @@ html {
 }
 .tabcordion .tabcordion-body-header .tabcordion-body-headline:focus {
   outline: none;
-  text-decoration: none;
 }
 .is-keyboarduser .tabcordion .tabcordion-body-header .tabcordion-body-headline:focus {
   outline: 2px dotted #000;
