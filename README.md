@@ -20,6 +20,9 @@ module in our [GUI-source repo](https://github.com/WestpacCXTeam/GUI-source/issu
 
 ### Release History
 
+* v3.0.1 - `LESS/CSS` ~~`HTML`~~ ~~`JS`~~
+	* The body of the tabcordion was transparent. We don’t have casual Friday here at the GUI headquarter and put the tabcordion in the proper attire.
+		[#275](https://github.com/WestpacCXTeam/GUI-source/issues/275)
 * v3.0.0 - `LESS/CSS` `HTML` `JS`
 	* Tabcordions have this really neat class that makes all tabs equal heights which looks really rad! Unless it doesn’t work. Then it looks bad, less rad.
 		No more.
