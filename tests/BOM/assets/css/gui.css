@@ -1735,7 +1735,7 @@ a:hover {
     width: auto;
   }
 }
-/*!tabcordions v3.0.0 BOM*/
+/*!tabcordions v3.0.1 BOM*/
 /*
  * tabcordion-soft mixins
  *
@@ -2042,6 +2042,7 @@ html {
   border-top: 1px solid #d2d5d8;
   border-bottom: 1px solid #d2d5d8;
   padding: 24px 3.22%;
+  background-color: #fff;
 }
 @media (min-width: 768px) {
   .tabcordion .collapsible-body .tabcordion-body {
