@@ -245,7 +245,7 @@ var GUI = (function guiInit() {
 
 //run GUI
 GUI.init();
-/*!tabcordions v3.0.1*/
+/*!tabcordions v4.0.0*/
 /***************************************************************************************************************************************************************
  *
  * tabcordion-soft
@@ -333,7 +333,7 @@ GUI.init();
 		if( _isAnimated ) {
 			$target
 				.stop(true)
-				.animate({ 'height': 0 }, 400, Callback);
+				.animate({ 'height': 0 }, 300, Callback);
 		}
 		else {
 			$target.css({ 'height': 0 });
@@ -433,7 +433,7 @@ GUI.init();
 	tabcordion.render = function tabcodionsRender() {
 		GUI.debugging( 'tabcordion: Rendering', 'report' );
 
-		$('.js-collapsible').not('.js-rendered').on('click', function clickCollapsible(e) {
+		$('.js-collapsible').not('.js-rendered').on('click arrow', function clickCollapsible(e) {
 			GUI.debugging( 'collapsible: Collapsible clicked', 'interaction' );
 			e.preventDefault();
 
@@ -447,47 +447,46 @@ GUI.init();
 
 				var $tabs = $this.parents('.tabcordion').find('.collapsible-body');
 				var _isMobile = parseInt( $('html').css('line-height') ) === 1; //responsive animations (requires responsive css on html)
-				var _isAccordion = true;
+				var _isAnimated = true;
 
 				if( !_isMobile ) {
-					_isAccordion = false;
+					_isAnimated = false;
 
 					if( $this.parents('.tabcordion-accordion').length ) {
-						_isAccordion = true;
+						_isAnimated = true;
 					}
 				}
 
 				if( $this.parents('.tabcordion-tabs').length ) {
-					_isAccordion = false;
+					_isAnimated = false;
 				}
 
 				//animating transition
-				if( _isAccordion ) {
-					GUI.collapsible.close( $tabs.filter('.is-open'), true );
+				GUI.collapsible.close( $tabs.filter('.is-open'), _isAnimated );
 
-					if( _hasScrollOffset ) {
-						GUI.debugging( 'collapsible: Open accordion with scroll-to-content', 'report' );
+				if( _hasScrollOffset ) {
+					GUI.debugging( 'collapsible: Open accordion with scroll-to-content', 'report' );
 
-						var scrollOffset = $tabcordion.attr('data-tabcordion-scroll');
-						if( scrollOffset === undefined ) {
-							scrollOffset = 0;
-						}
-
-						GUI.collapsible.open( $tabcordion.find( target ), true, function scrollToTab() {
-							//scroll to top
-							$('html, body').animate({ scrollTop: ( $this.offset().top - 60 - scrollOffset ) }, 300);
-						}, false);
+					var scrollOffset = $tabcordion.attr('data-tabcordion-scroll');
+					if( scrollOffset === undefined ) {
+						scrollOffset = 0;
 					}
-					else {
-						GUI.debugging( 'collapsible: Open accordion without scroll-to-content', 'report' );
 
-						GUI.collapsible.open( $tabcordion.find( target ), true, null, false);
-					}
+					GUI.collapsible.open( $tabcordion.find( target ), _isAnimated, function scrollToTab() {
+						//scroll to top
+						$('html, body').animate({ scrollTop: ( $this.offset().top - 60 - scrollOffset ) }, 200);
+					}, false);
 				}
 				else {
-					GUI.collapsible.close( $tabs.filter('.is-open'), false, function closingCallback() {
-						GUI.collapsible.open( $tabcordion.find( target ), false, null, false );
+					GUI.debugging( 'collapsible: Open accordion without scroll-to-content', 'report' );
+
+					var oldScroll = $(window).scrollTop();
+
+					$( window ).one('scroll', function() {
+						$(window).scrollTop( oldScroll ); //disable scroll just once
 					});
+
+					GUI.collapsible.open( $tabcordion.find( target ), _isAnimated, null, false);
 				}
 
 				//adding active states to tabs and headers
@@ -511,6 +510,10 @@ GUI.init();
 					.find('.js-collapsible[data-collapsible="' + target + '"], .js-collapsible[href="' + target + '"]')
 					.attr('aria-selected', true)
 					.attr('aria-expanded', true);
+
+				if( e.type === 'click' ) { //only trigger on tabbing or clicking, not arrowing
+					$( target ).focus();
+				}
 			}
 			else {
 				GUI.debugging( 'collapsible: Triggering pure toggle', 'report' );
@@ -565,7 +568,7 @@ GUI.init();
 				$target //enable the target one
 					.attr('tabindex', null)
 					.focus()
-					.trigger('click');
+					.trigger('arrow');
 			}
 		});
 
