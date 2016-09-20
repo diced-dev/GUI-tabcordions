@@ -20,7 +20,7 @@ module in our [GUI-source repo](https://github.com/WestpacCXTeam/GUI-source/issu
 
 ### Release History
 
-* v4.0.0 - `LESS/CSS` `HTML` ~~`JS`~~
+* v4.0.0 - `LESS/CSS` `HTML` `JS`
 	* Tabcordions gain a helper. The WCAG has long been struggling with how to use arrow keys vs the tab key for keyboard users. This update is an attempt to
 		help both use cases while improving the overall usability of tabs.
 		[#283](https://github.com/WestpacCXTeam/GUI-source/issues/283)
