@@ -108,6 +108,11 @@
 			border-radius: 0;
 		}
 
+		//helper
+		.tabcordion-tab-helper {
+			display: none;
+		}
+
 		//tabs
 		.tabcordion-tabs {
 			display: none;
@@ -142,6 +147,7 @@
 				}
 
 				a {
+					position: relative;
 					display: inline-block;
 					display: flex;
 					align-items: flex-end;
@@ -158,6 +164,40 @@
 
 					&:focus {
 						.outline();
+
+						.is-keyboarduser & {
+							.tabcordion-tab-helper {
+								display: block;
+								position: absolute;
+								bottom: 110%;
+								left: 50%;
+								margin: 0 0 6px -85px;
+								color: #fff;
+								background-color: #000;
+								padding: 7px;
+								width: 170px;
+								border-radius: 3px;
+								text-align: center;
+								white-space: normal;
+								pointer-events: none;
+								transition-delay: 100ms;
+								z-index: 100;
+
+								&:after {
+									content: " ";
+									margin-left: -10px;
+									width: 0;
+									border-top: 10px solid #000;
+									border-right: 10px solid transparent;
+									border-left: 10px solid transparent;
+									font-size: 0;
+									line-height: 0;
+									position: absolute;
+									bottom: -10px;
+									left: 50%;
+								}
+							}
+						}
 					}
 
 					&:hover {
