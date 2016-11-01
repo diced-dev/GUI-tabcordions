@@ -1,11 +1,7 @@
-/*! _colors v2.0.1 */
+/*! _colors v2.0.2 */
 /*
 	 *  SETTINGS
 	 */
-.written-by {
-  content: 'Dominik Wilkowski, Justin Spencer, Kate T MacDonald, Marita Purins, Daphne Bourne';
-  color: #BADA55;
-}
 /*! _fonts v2.0.2 */
 /*
 	 *  SETTINGS
@@ -1441,7 +1437,7 @@ body {
   font-size: 0.875em;
   line-height: 1.428571429;
   color: #333;
-  background-color: #ebebeb;
+  background-color: #f0f1f1;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
 abbr[title] {
@@ -1457,7 +1453,7 @@ blockquote {
   font-weight: 300;
 }
 mark {
-  background-color: #f2d0d5;
+  background-color: #f7d1d5;
 }
 p {
   margin: 0.8571428572em 0;
@@ -1469,23 +1465,23 @@ dl dd {
   margin: 0;
 }
 ::-moz-selection {
-  background-color: #f2d0d5;
+  background-color: #f7d1d5;
 }
 ::selection {
-  background-color: #f2d0d5;
+  background-color: #f7d1d5;
 }
 a {
-  color: #c0142e;
+  color: #d81b2b;
   text-decoration: underline;
 }
 a:hover,
 a:focus {
-  color: #c0142e;
+  color: #d81b2b;
   text-decoration: underline;
 }
 a:focus {
   outline: none;
-  color: #c0142e;
+  color: #d81b2b;
 }
 .is-keyboarduser a:focus {
   outline: 2px dotted #000;
@@ -1613,7 +1609,7 @@ html {
   }
 }
 .tabcordion {
-  border: 1px solid #c2c2c2;
+  border: 1px solid #d3d4d5;
   border-bottom: 0 none;
   border-radius: 3px;
 }
@@ -1628,7 +1624,7 @@ html {
   border-radius: 0;
 }
 .tabcordion-accordion.tabcordion {
-  border: 1px solid #c2c2c2;
+  border: 1px solid #d3d4d5;
   border-bottom: 0 none;
   border-radius: 3px;
 }
@@ -1683,8 +1679,8 @@ html {
       align-items: flex-end;
   padding: 14px 18px 14px 18px;
   color: #333;
-  background-color: #f5f5f5;
-  border: 1px solid #c2c2c2;
+  background-color: #f8f8f8;
+  border: 1px solid #d3d4d5;
   border-bottom: 0 none;
   border-top-right-radius: 6px;
   border-top-left-radius: 6px;
@@ -1732,7 +1728,7 @@ html {
 .tabcordion .tabcordion-tabs .tabcordion-tab a:hover {
   outline: none;
   text-decoration: none;
-  background-color: #ebebeb;
+  background-color: #f0f1f1;
 }
 .tabcordion .tabcordion-tabs .tabcordion-tab.is-active a {
   background-color: #fff;
@@ -1744,30 +1740,30 @@ html {
       flex-grow: 1;
 }
 .tabcordion-lego.tabcordion .tabcordion-tabs .tabcordion-tab a {
-  background-color: #365fb4;
+  background-color: #002f6c;
   color: #fff;
   border-radius: 0;
   margin-bottom: 2px;
   padding-bottom: 12px;
-  border-color: #365fb4;
+  border-color: #002f6c;
   transition: background 0.3s ease, padding 0.3s ease, margin 0.3s ease;
 }
 .tabcordion-lego.tabcordion .tabcordion-tabs .tabcordion-tab a:hover {
-  background-color: #728fcb;
+  background-color: #4d6d98;
 }
 .tabcordion-lego.tabcordion .tabcordion-tabs .tabcordion-tab.is-active a {
   background-color: #fff;
   color: #333;
   margin-bottom: -1px;
   padding-bottom: 15px;
-  border-color: #c2c2c2;
+  border-color: #d3d4d5;
 }
 .tabcordion .tabcordion-body-header {
   display: block;
   font-size: 16px;
   position: relative;
   z-index: 2;
-  border-bottom: 1px solid #c2c2c2;
+  border-bottom: 1px solid #d3d4d5;
 }
 .tabcordion .tabcordion-body-header:last-child {
   border-bottom: 0 none;
@@ -1780,7 +1776,7 @@ html {
 }
 .tabcordion-accordion.tabcordion .tabcordion-body-header {
   display: block;
-  border-bottom: 1px solid #c2c2c2;
+  border-bottom: 1px solid #d3d4d5;
 }
 .tabcordion .tabcordion-body-header .tabcordion-body-headline {
   display: block;
@@ -1788,7 +1784,7 @@ html {
   color: #333;
   position: relative;
   transition: 0.3s ease;
-  background-color: #f5f5f5;
+  background-color: #f8f8f8;
   text-decoration: none;
 }
 .tabcordion .tabcordion-body-header .tabcordion-body-headline:before {
@@ -1831,7 +1827,7 @@ html {
 .tabcordion .tabcordion-body-header .tabcordion-body-headline:hover {
   outline: none;
   text-decoration: none;
-  background-color: #ebebeb;
+  background-color: #f0f1f1;
 }
 .tabcordion .tabcordion-body-header .tabcordion-body-headline:active {
   text-decoration: none;
@@ -1847,7 +1843,7 @@ html {
   left: 42px;
   display: inline-block;
   vertical-align: middle;
-  border-top: 16px solid #c2c2c2;
+  border-top: 16px solid #d3d4d5;
   border-top-style: solid;
   border-right: 12px solid transparent;
   border-bottom: none;
@@ -1862,27 +1858,27 @@ html {
   left: 42px;
   display: inline-block;
   vertical-align: middle;
-  border-top: 16px solid #f5f5f5;
+  border-top: 16px solid #f8f8f8;
   border-right: 12px solid transparent;
   border-bottom: none;
   border-left: 12px solid transparent;
   z-index: 2;
 }
 .tabcordion .tabcordion-body-header.is-active .tabcordion-body-headline:hover {
-  background-color: #f5f5f5;
+  background-color: #f8f8f8;
 }
 .tabcordion .tabcordion-body-header.is-active .tabcordion-body-headline:after {
   border-top-color: #fff;
 }
 .tabcordion-lego.tabcordion .tabcordion-body-header {
   transition: border 0.3s ease;
-  border-left: 12px solid #c2c2c2;
+  border-left: 12px solid #d3d4d5;
 }
 .tabcordion-lego.tabcordion .tabcordion-body-header .tabcordion-body-headline {
   padding-left: 12px;
 }
 .tabcordion-lego.tabcordion .tabcordion-body-header.is-active {
-  border-left-color: #365fb4;
+  border-left-color: #002f6c;
 }
 .tabcordion-lego.tabcordion .tabcordion-body-header.is-active .tabcordion-body-headline {
   background-color: #fff;
@@ -1896,15 +1892,15 @@ html {
   z-index: 1;
 }
 .tabcordion .collapsible-body .tabcordion-body {
-  border-top: 1px solid #c2c2c2;
-  border-bottom: 1px solid #c2c2c2;
+  border-top: 1px solid #d3d4d5;
+  border-bottom: 1px solid #d3d4d5;
   padding: 24px 3.22%;
   background-color: #fff;
 }
 @media (min-width: 768px) {
   .tabcordion .collapsible-body .tabcordion-body {
-    border-right: 1px solid #c2c2c2;
-    border-left: 1px solid #c2c2c2;
+    border-right: 1px solid #d3d4d5;
+    border-left: 1px solid #d3d4d5;
   }
 }
 .tabcordion-accordion.tabcordion .collapsible-body .tabcordion-body {
@@ -1912,8 +1908,8 @@ html {
   border-left: 0 none;
 }
 .tabcordion-tabs.tabcordion .collapsible-body .tabcordion-body {
-  border-right: 1px solid #c2c2c2;
-  border-left: 1px solid #c2c2c2;
+  border-right: 1px solid #d3d4d5;
+  border-left: 1px solid #d3d4d5;
 }
 .tabcordion-lego.tabcordion .collapsible-body .tabcordion-body {
   border-top: 0 none;
@@ -1922,7 +1918,7 @@ html {
 }
 @media (min-width: 768px) {
   .tabcordion-lego.tabcordion .collapsible-body .tabcordion-body {
-    border-top: 1px solid #c2c2c2;
+    border-top: 1px solid #d3d4d5;
     padding-left: 3.22%;
   }
 }
@@ -1932,7 +1928,7 @@ html {
   padding-right: 24px;
 }
 .tabcordion-tabs.tabcordion-lego.tabcordion .collapsible-body .tabcordion-body {
-  border-top: 1px solid #c2c2c2;
+  border-top: 1px solid #d3d4d5;
   padding-left: 3.22%;
 }
 @media print {
