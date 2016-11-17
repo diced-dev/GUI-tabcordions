@@ -245,7 +245,7 @@ var GUI = (function guiInit() {
 
 //run GUI
 GUI.init();
-/*!tabcordions v4.0.0*/
+/*!tabcordions v4.1.0*/
 /***************************************************************************************************************************************************************
  *
  * tabcordion-soft
@@ -448,6 +448,12 @@ GUI.init();
 				var $tabs = $this.parents('.tabcordion').find('.collapsible-body');
 				var _isMobile = parseInt( $('html').css('line-height') ) === 1; //responsive animations (requires responsive css on html)
 				var _isAnimated = true;
+				
+				var _isOpenable = true;
+				var _isCloseable = true;
+				var _isAccordion = $(this).parents('.tabcordion-accordion').length ? true : false;
+				var _isSingle = $tabs.length === 1 ? true : false;
+				var _isOpen = $tabs.filter('.is-open').length > 0 ? true : false;
 
 				if( !_isMobile ) {
 					_isAnimated = false;
@@ -461,8 +467,19 @@ GUI.init();
 					_isAnimated = false;
 				}
 
+				// Determine if accordion can be toggled
+				if( _isAccordion && _isSingle ){
+					if( _isOpen ){
+						_isOpenable = false;
+					} else {
+						_isCloseable = false;
+					}
+				}
+
 				//animating transition
-				GUI.collapsible.close( $tabs.filter('.is-open'), _isAnimated );
+				if( _isCloseable ){				
+					GUI.collapsible.close( $tabs.filter('.is-open'), _isAnimated );
+				}
 
 				if( _hasScrollOffset ) {
 					GUI.debugging( 'collapsible: Open accordion with scroll-to-content', 'report' );
@@ -472,10 +489,12 @@ GUI.init();
 						scrollOffset = 0;
 					}
 
-					GUI.collapsible.open( $tabcordion.find( target ), _isAnimated, function scrollToTab() {
-						//scroll to top
-						$('html, body').animate({ scrollTop: ( $this.offset().top - 60 - scrollOffset ) }, 200);
-					}, false);
+					if( _isOpenable ){
+						GUI.collapsible.open( $tabcordion.find( target ), _isAnimated, function scrollToTab() {
+							//scroll to top
+							$('html, body').animate({ scrollTop: ( $this.offset().top - 60 - scrollOffset ) }, 200);
+						}, false);
+					}
 				}
 				else {
 					GUI.debugging( 'collapsible: Open accordion without scroll-to-content', 'report' );
@@ -486,33 +505,45 @@ GUI.init();
 						$(window).scrollTop( oldScroll ); //disable scroll just once
 					});
 
-					GUI.collapsible.open( $tabcordion.find( target ), _isAnimated, null, false);
+					if( _isOpenable ){
+						GUI.collapsible.open( $tabcordion.find( target ), _isAnimated, null, false);
+					}
 				}
 
 				//adding active states to tabs and headers
-				$tabcordion
-					.find('.js-collapsible')
-					.parents('.js-collapsible-tab')
-					.removeClass('is-active');
+				if( _isCloseable ){
+					$tabcordion
+						.find('.js-collapsible')
+						.parents('.js-collapsible-tab')
+						.removeClass('is-active');
+				}
 
-				$tabcordion
-					.find('.js-collapsible[data-collapsible="' + target + '"], .js-collapsible[href="' + target + '"]')
-					.parents('.js-collapsible-tab')
-					.addClass('is-active');
+				if( _isOpenable ){
+					$tabcordion
+						.find('.js-collapsible[data-collapsible="' + target + '"], .js-collapsible[href="' + target + '"]')
+						.parents('.js-collapsible-tab')
+						.addClass('is-active');
+				}
 
 				//changing aria attributes
-				$tabcordion
-					.find('.js-collapsible')
-					.attr('aria-selected', false)
-					.attr('aria-expanded', false);
+				if( _isCloseable ){
+					$tabcordion
+						.find('.js-collapsible')
+						.attr('aria-selected', false)
+						.attr('aria-expanded', false);
+				}
 
-				$tabcordion
-					.find('.js-collapsible[data-collapsible="' + target + '"], .js-collapsible[href="' + target + '"]')
-					.attr('aria-selected', true)
-					.attr('aria-expanded', true);
+				if( _isOpenable ){
+					$tabcordion
+						.find('.js-collapsible[data-collapsible="' + target + '"], .js-collapsible[href="' + target + '"]')
+						.attr('aria-selected', true)
+						.attr('aria-expanded', true);
+				}
 
 				if( e.type === 'click' ) { //only trigger on tabbing or clicking, not arrowing
-					$( target ).focus();
+					if( _isOpenable ){
+						$( target ).focus();
+					}
 				}
 			}
 			else {
