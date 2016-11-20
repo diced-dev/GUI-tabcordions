@@ -201,17 +201,16 @@
 				var $tabs = $this.parents('.tabcordion').find('.collapsible-body');
 				var _isMobile = parseInt( $('html').css('line-height') ) === 1; //responsive animations (requires responsive css on html)
 				var _isAnimated = true;
-				
 				var _isOpenable = true;
 				var _isCloseable = true;
-				var _isAccordion = $(this).parents('.tabcordion-accordion').length ? true : false;
+				var _isAccordion = $this.parents('.tabcordion-accordion').length;
 				var _isSingle = $tabs.length === 1 ? true : false;
-				var _isOpen = $tabs.filter('.is-open').length > 0 ? true : false;
+				var _isOpen = $tabs.filter('.is-open').length;
 
 				if( !_isMobile ) {
 					_isAnimated = false;
 
-					if( $this.parents('.tabcordion-accordion').length ) {
+					if( _isAccordion ) {
 						_isAnimated = true;
 					}
 				}
@@ -222,6 +221,8 @@
 
 				// Determine if accordion can be toggled
 				if( _isAccordion && _isSingle ){
+					GUI.debugging( 'collapsible: Found to be a single tabcordion accordion', 'report' );
+
 					if( _isOpen ){
 						_isOpenable = false;
 					} else {
@@ -235,14 +236,14 @@
 				}
 
 				if( _hasScrollOffset ) {
-					GUI.debugging( 'collapsible: Open accordion with scroll-to-content', 'report' );
-
-					var scrollOffset = $tabcordion.attr('data-tabcordion-scroll');
-					if( scrollOffset === undefined ) {
-						scrollOffset = 0;
-					}
-
 					if( _isOpenable ){
+						GUI.debugging( 'collapsible: Open accordion with scroll-to-content', 'report' );
+
+						var scrollOffset = $tabcordion.attr('data-tabcordion-scroll');
+						if( scrollOffset === undefined ) {
+							scrollOffset = 0;
+						}
+
 						GUI.collapsible.open( $tabcordion.find( target ), _isAnimated, function scrollToTab() {
 							//scroll to top
 							$('html, body').animate({ scrollTop: ( $this.offset().top - 60 - scrollOffset ) }, 200);
@@ -250,15 +251,15 @@
 					}
 				}
 				else {
-					GUI.debugging( 'collapsible: Open accordion without scroll-to-content', 'report' );
-
-					var oldScroll = $(window).scrollTop();
-
-					$( window ).one('scroll', function() {
-						$(window).scrollTop( oldScroll ); //disable scroll just once
-					});
-
 					if( _isOpenable ){
+						GUI.debugging( 'collapsible: Open accordion without scroll-to-content', 'report' );
+
+						var oldScroll = $(window).scrollTop();
+
+						$( window ).one('scroll', function() {
+							$(window).scrollTop( oldScroll ); //disable scroll just once
+						});
+
 						GUI.collapsible.open( $tabcordion.find( target ), _isAnimated, null, false);
 					}
 				}
